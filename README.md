@@ -39,21 +39,21 @@ ws.onclose = function (){
 };
 
 ws.onmessage = function(){
-  alet updated = jsonObj.updated;
+  let updated = jsonObj.updated;
   if (updated == "variable") {
     //  variable
-    jsonObj.data.foreach(item){
+    jsonObj.data.foreach(item => {
       let name = item.name;
       let quality = item.quality;
       let value = item.value;
-    }
+    });
   } else if (updated == "alarm") {
     //  alarm
-    jsonObj.data.foreach(item){
+    jsonObj.data.foreach(item => {
       let variable = item.variable;
       let status = item.status;
       let message = item.message;
-    }
+    });
   } else if (updated == "error") {
     //  error 
   }
